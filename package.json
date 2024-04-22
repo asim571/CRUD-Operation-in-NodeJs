@@ -1,0 +1,21 @@
+{
+  "name": "nodejstutorial",
+  "version": "1.0.0",
+  "description": "CRUD operation",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Asim Ghimire",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "my": "^0.3.3",
+    "mysql2": "^3.9.6",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

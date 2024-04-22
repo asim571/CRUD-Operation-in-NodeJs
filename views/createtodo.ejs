@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Todo</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+     .container {
+            max-width: 400px;
+            margin: 20px auto; 
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+            input[type="text"],
+            textarea {
+                width: calc(100% - 22px);
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+
+            input[type="submit"] {
+                background-color: #333;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #555;
+            }
+    </style>
+</head>
+<body>
+    <%- include('./navbar') %>
+    <div class="container">
+        <h1>Create Todo</h1>
+        <form action="/todo" method="POST">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+
+            <label for="status">Status:</label><br>
+            <select id="status" name="status" required>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+                <option value="In Progress">In Progress</option>
+            </select><br>
+
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description"></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <%- include('./footer') %>
+</body>
+</html>

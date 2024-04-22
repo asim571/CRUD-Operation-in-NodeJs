@@ -1,0 +1,10 @@
+First step: npm init or npm init -y
+package.json file is created on using this command and it describes the project
+ctrl+backticks(`) for opening terminal
+
+Second step: make app.js file
+
+Third step: npm i express
+
+Semantic version: (major.minor.patch)=> 4.29.2 (semver)
+
